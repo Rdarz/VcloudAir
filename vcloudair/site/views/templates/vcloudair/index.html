@@ -1,0 +1,70 @@
+{% extends "layouts/default.html" %}
+
+{# display page values using the {{entry.field_id}} tag. #}
+{% block content %}
+<section class="container-fluid banner">
+
+<img src="static/images/slide1.png" class="img-responsive"/>
+<div class="layer">
+{% for init in entry.slider.caption%}
+
+<div class="caption slide">
+
+	<h2>{{init.headline}}</h2>
+	<h4>{{init.description}}</h4>
+	<button>{{init.button}}</button>
+
+
+
+
+</div>
+{% endfor %}
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    <h1>{{entry.title}}</h1>
+    
+			<ul>
+			<li><b>Title:</b> {{entry.title}}</li>
+			<li><b>URL:</b> {{entry.url}}</li>
+			<li><b>Header</b>:<br>
+				<ul>
+				<li>
+					<b>Logo(url):</b> <img src='{{getAssetUrl(entry.header.logo)}}'>
+				</li>
+				<li><b>Tagline:</b> {{entry.header.tagline}}</li>
+				<li><b>menu:</b>
+					{% set entry_header_menu = entry.header.menu %}
+					<ul>
+					{% for _entry_header_menu in entry_header_menu -%}
+						<li><b>menu</b>:<br>
+							<ul>
+							<li><b>Title:</b> {{_entry_header_menu.title}}</li>
+							</ul>
+						</li>
+					{%- endfor %}
+					</ul>
+				</li>
+				</ul>
+			</li>
+			</ul>
+    <p style="color: #555; font-size: 14px">Note: Template automatically generated at "D:\VCloud Air CMS\vcloudair\site\views\templates\vcloudair\index.html"</p> -->
+</section>
+{% endblock %}

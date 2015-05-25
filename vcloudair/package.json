@@ -1,0 +1,10 @@
+{
+  "name": "app-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "contentstack-framework": "^0.1.9"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "port": 4000,
+  "locales": [
+    {
+      "name": "en-us",
+      "relativeURLPrefix": "/"
+    }
+  ],
+  "contentstack": {
+    "api_key": "blt358d090f25d521e4",
+    "access_token": "bltfe035529dfd01e1b2ebe80a2"
+  }
+}
