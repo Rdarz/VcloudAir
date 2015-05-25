@@ -11,6 +11,14 @@ $("#menu").slideDown(1000);
         var current= $('.slide');
     $(current[indx]).fadeOut(1000,function(){indx++;if(indx>=current.length)indx=0;$(current[indx]).fadeIn(5000,sample)});
     }
+
+
+
+
+
+    $(".left").animate({"left":"-10%"}, 3800);
+			$(".left-overlay").animate({"width":"76%"},3800);
+			$(".right").animate({"left":"30.7%"}, 3000);
 });
 
 // $('.caption:first-child').fadeIn(2500);

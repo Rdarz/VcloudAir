@@ -1,5 +1,5 @@
-html{background-color:#e6e9e9}
-body{margin:0 auto;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5em;color:#545454;background-color:#fff;box-shadow:0 0 2px rgba(0,0,0,.06)}
+
+body{margin:0 auto;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5em;color:#545454;box-shadow:0 0 2px rgba(0,0,0,.06)}
 
 b,strong{font-weight:600}
 .logo{padding:1em;}
@@ -9,10 +9,10 @@ header .container .navbar-nav{margin-top: 3%;display: none}
 header .container .navbar-nav a{color:#393939;}
 header .container .navbar-nav li{}
 
-section img{width:100%;height:600px;margin-top: -1%;margin-top: -10%;}
-section{background-color: rgba(0,0,0,0.2);overflow: hidden;   }
+.banner img{width:100%;margin-top: -1%;margin-top: -10%;}
+section{overflow: hidden;   }
 
-section.container-fluid{position: relative;padding: 0; }
+
 
 body section .caption{  
   border-radius: 15%;
@@ -40,3 +40,81 @@ section .caption button{  background: none;
   z-index: 5;
   top: 0;}
 
+  section .banner{padding:0;}
+  
+
+  section .about{background-color: #f7f7f7;padding:6em 0;}
+  section .about .container .col-md-4{height:12em;border-left:0.1em solid #cccccc;}
+  section .about .container .col-md-4:first-child{border:none;}
+  section .about .container .col-md-4 button{background: none;color:#106a8f;border-style: none;border: 0.2em solid #106a8f;
+  padding: 0.5em 2em;  margin: 2em;border-radius:0.5em; }
+  section .about .container .col-md-4 p{font-size: 16px;line-height: 0.7em}
+  section .about .container .col-md-4 h4{padding:1em 0;}
+  section .works{margin: 5em 0}
+  section .works .container .col-md-4{padding:2em;}
+  section .works .container .col-md-4 p{font-size: 16px;line-height: 0.7em}
+  
+  section .works .container .col-md-4 h4{padding:1em;}
+  section .works .container .col-md-4 .img{padding:1em;}
+  section .works .container h2{font-weight:normal;letter-spacing: 0.05em;font-size: 50px; }
+
+
+
+
+
+
+  .left{position: relative; float:left; left: -60%; font-size: 20px; color: #2E8DEF;}
+
+  .left-overlay{position: absolute;top: 0;  left: -21%; background: rgb(0, 82, 121);mix-blend-mode: multiply;   width: 85%; height:100%;  
+
+  transform-origin: bottom left;
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-24.5deg, 0deg);
+
+  }
+    .right{  position: absolute;
+  /* position: relative; */
+  float: right;
+  left: 101%;
+  font-size: 20px;
+  width: 32.5%;
+  height: 500px;
+  color: #2E8DEF;
+  right: 0;}
+
+  .right-overlay{
+  background: rgb(0, 149, 211);
+  mix-blend-mode: multiply;
+  position: absolute;
+  width: 222%;
+  height: 100%;
+  top: 0;
+   left: 1.5%;
+   transform-origin: bottom left;
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-24.5deg, 0deg);
+
+  }
+  section .slider .container-fluid h1{font-size: 30px;
+color: #FFF;
+position: absolute;
+top: 27%;
+bottom: 0px;
+margin: auto;
+width: 22%;
+left: 11%;}
+ 
+ section .slider .container-fluid .right_content{color: #FFF;
+position: absolute;
+top: 20%;
+bottom: 0px;
+margin: auto;
+width: 35%;
+right: 15%;}
+ section .slider .container-fluid .row .right_content p{
+font-size: 50px;}
+ section .slider .container-fluid .row .right_content span{font-size: 16px;}
+  section .slider .container-fluid .row .right_content button{background: none;color:#fff;border-style: none;border: 0.2em solid #fff;
+  padding: 0.5em 2em ;  margin: 2em 0;border-radius:0.5em;}

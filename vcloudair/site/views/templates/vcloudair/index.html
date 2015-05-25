@@ -2,27 +2,63 @@
 
 {# display page values using the {{entry.field_id}} tag. #}
 {% block content %}
-<section class="container-fluid banner">
-
-<img src="static/images/slide1.png" class="img-responsive"/>
-<div class="layer">
-{% for init in entry.slider.caption%}
-
-<div class="caption slide">
-
-	<h2>{{init.headline}}</h2>
-	<h4>{{init.description}}</h4>
-	<button>{{init.button}}</button>
-
-
-
-
+<section >
+<div class="container-fluid banner">
+	<img src="static/images/slide1.png" class="img-responsive"/>
+	<div class="layer">
+		{% for init in entry.slider.caption%}
+			<div class="caption slide">
+				<h2>{{init.headline}}</h2>
+				<h4>{{init.description}}</h4>
+				<button>{{init.button}}</button>
+			</div>
+		{% endfor %}
+	</div>
 </div>
-{% endfor %}
-
-
+<div class="container-fluid about">
+		<div class="container">
+			{% for init in entry.about.details %}
+				<div class="col-md-4 text-center">
+					<h4>{{init.title}}</h4>
+					{{init.description}}
+					<button>{{init.button}}</button>
+				</div>
+			{% endfor %}
+		</div>
 </div>
+<div class="works">
+	<div class="container">
+	<h2 class="text-center">{{entry.works_title}}</h2>
+		{% for init in entry.works %}
+				<div class="col-md-4 text-center">
+					<div class="img"><img src='{{getAssetUrl(init.logo)}}'></div>
+					<h4>{{init.title}}</h4>
+					{{init.desc}}
+					
+				</div>
+		{% endfor %}
+	</div>
+</div>
+<div class="slider">
+	<div class="container-fluid">
+						<div class="row col-md-12 col-xs-12 col-lg-12">
+					<div class="left">
+						<img src="static/images/cust.png" alt="" class="img-responsive">
+						<div class="left-overlay"></div>
+					</div>
+					<h1>"Enabling us to build our solution out in areas we never thought we could do before."</h1>
+					<div class="right">
+						<div class="right-overlay">	</div>
+					</div>
+					<div class="right_content">
+					<p>Our customers love it</p>
+					<span>See what our customers are saying about using vCloud Air and how it seamlessly extends data centers into the cloud using their existing tools and processes.</span><br>
+					<button type="">SEE MORE STORIES</button>
+					</div>
+				</div>
 
+	</div>
+</div>
 
 
 
