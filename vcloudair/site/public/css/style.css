@@ -85,7 +85,7 @@ body section .caption{
     }
 }
 
- body section .caption:nth-child(1){
+/* body section .caption:nth-child(1){
     animation:top-one 5s ease 5s  infinite;
  }
 
@@ -95,7 +95,7 @@ body section .caption{
 
  body section .caption:nth-child(3){
     animation:top-three 5s ease 15s  infinite;
- }
+ }*/
 /*body section .caption:first-child {display:block;}*/
 section .caption button{  background: none;
   border-style: none;

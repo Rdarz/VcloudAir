@@ -24,10 +24,14 @@ $("#menu").slideDown(1000);
 var incabout=1;
 var incworks=1;
 
+function loop(){
 
-
-
-
+	$('body section .caption:nth-child(1)').css("animation","top-one 5s ease 5s");
+	$('body section .caption:nth-child(2)').css("animation","top-one 5s ease 10s");
+	$('body section .caption:nth-child(3)').css("animation","top-one 5s ease 15s");
+loop();
+};
+loop();
 
 $(".about").waypoint(function(){
 
