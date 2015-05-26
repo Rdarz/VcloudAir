@@ -6,6 +6,7 @@
 <div class="container-fluid banner">
 	<img src="static/images/slide1.png" class="img-responsive"/>
 	<div class="layer">
+		<div class="content">
 		{% for init in entry.slider.caption%}
 			<div class="caption slide">
 				<h2>{{init.headline}}</h2>
@@ -13,12 +14,13 @@
 				<button>{{init.button}}</button>
 			</div>
 		{% endfor %}
+		</div>
 	</div>
 </div>
 <div class="container-fluid about">
 		<div class="container">
 			{% for init in entry.about.details %}
-				<div class="col-md-4 text-center">
+				<div class="col-md-4 text-center animblock-about notViewed" data-position="bottom">
 					<h4>{{init.title}}</h4>
 					{{init.description}}
 					<button>{{init.button}}</button>
@@ -30,7 +32,7 @@
 	<div class="container">
 	<h2 class="text-center">{{entry.works_title}}</h2>
 		{% for init in entry.works %}
-				<div class="col-md-4 text-center">
+				<div class="col-md-4 text-center animblock notViewed" data-position="bottom">
 					<div class="img"><img src='{{getAssetUrl(init.logo)}}'></div>
 					<h4>{{init.title}}</h4>
 					{{init.desc}}
@@ -46,14 +48,21 @@
 						<img src="static/images/cust.png" alt="" class="img-responsive">
 						<div class="left-overlay"></div>
 					</div>
-					<h1>"Enabling us to build our solution out in areas we never thought we could do before."</h1>
+					<h1>{{entry.customers.left.description}}<br><br>
+					<img src='{{getAssetUrl(entry.customers.left.logo)}}'></h1>
+
+
 					<div class="right">
 						<div class="right-overlay">	</div>
 					</div>
 					<div class="right_content">
-					<p>Our customers love it</p>
-					<span>See what our customers are saying about using vCloud Air and how it seamlessly extends data centers into the cloud using their existing tools and processes.</span><br>
-					<button type="">SEE MORE STORIES</button>
+					<p>{{entry.customers.right.title}}</p>
+					<span>{{entry.customers.right.description}}</span><br>
+					<button type="">{{entry.customers.right.button}}</button><br>
+					{% for init in entry.customers.right.logo %}
+					<img src='{{getAssetUrl(init)}}'>
+					{% endfor %}
+
 					</div>
 				</div>
 

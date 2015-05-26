@@ -11,22 +11,91 @@ header .container .navbar-nav li{}
 
 .banner img{width:100%;margin-top: -1%;margin-top: -10%;}
 section{overflow: hidden;   }
-
+section .content{overflow: hidden;
+height: 20em;
+position: absolute;
+top: 30%;
+width: 100%;}
 
 
 body section .caption{  
   border-radius: 15%;
   text-align: center;
-  height: 300px;
+ 
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   margin: auto;
   color: white;
-  display: none;
+  display: block;
   right: 0;
-  width: 48em;display:none;}
+  width: 48em;}
+  body section .caption{ transform:translateY(100%);}
+
+  @keyframes top-one {
+     0% {
+        transform:translateY(200%);
+    }
+    50% {
+        transform:translateY(0);
+    }
+    60% {
+        transform:translateY(0%);        
+    }
+    90% {
+        transform:translateY(0);        
+    }
+    100%{
+        transform:translateY(-200%);
+    }
+}
+@keyframes top-two {
+    0% {
+        transform:translateY(200%);
+    }
+    50% {
+        transform:translateY(0);
+    }
+    60% {
+        transform:translateY(0);        
+    }
+    90% {
+        transform:translateY(0);        
+    }
+    100%{
+        transform:translateY(-200%);
+    }
+}
+@keyframes top-three {
+      0% {
+        transform:translateY(200%);
+    }
+    50% {
+        transform:translateY(0);
+    }
+    60% {
+        transform:translateY(0%);        
+    }
+    90% {
+        transform:translateY(0);        
+    }
+    100%{
+        transform:translateY(-200%);
+    }
+}
+
+ body section .caption:nth-child(1){
+    animation:top-one 5s ease 5s  infinite;
+ }
+
+ body section .caption:nth-child(2){
+    animation:top-two 5s ease  10s infinite;
+ }
+
+ body section .caption:nth-child(3){
+    animation:top-three 5s ease 15s  infinite;
+ }
 /*body section .caption:first-child {display:block;}*/
 section .caption button{  background: none;
   border-style: none;
@@ -40,17 +109,18 @@ section .caption button{  background: none;
   z-index: 5;
   top: 0;}
 
-  section .banner{padding:0;}
+  section .banner{padding:0;position: relative;}
   
 
-  section .about{background-color: #f7f7f7;padding:6em 0;}
+  section .about{background-color: #f7f7f7;padding:6em 0;overflow: hidden;}
   section .about .container .col-md-4{height:12em;border-left:0.1em solid #cccccc;}
   section .about .container .col-md-4:first-child{border:none;}
   section .about .container .col-md-4 button{background: none;color:#106a8f;border-style: none;border: 0.2em solid #106a8f;
   padding: 0.5em 2em;  margin: 2em;border-radius:0.5em; }
   section .about .container .col-md-4 p{font-size: 16px;line-height: 0.7em}
   section .about .container .col-md-4 h4{padding:1em 0;}
-  section .works{margin: 5em 0}
+
+  section .works{margin: 3em 0}
   section .works .container .col-md-4{padding:2em;}
   section .works .container .col-md-4 p{font-size: 16px;line-height: 0.7em}
   
@@ -118,3 +188,24 @@ font-size: 50px;}
  section .slider .container-fluid .row .right_content span{font-size: 16px;}
   section .slider .container-fluid .row .right_content button{background: none;color:#fff;border-style: none;border: 0.2em solid #fff;
   padding: 0.5em 2em ;  margin: 2em 0;border-radius:0.5em;}
+   section .slider .container-fluid .row .right_content img{margin-right:2em;}
+
+
+.animblock,.animblock-about {
+  display: inline-block;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: relative;
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.animblock,.animblock-about{bottom:-50%;}
+.viewed {
+  bottom: 0%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
