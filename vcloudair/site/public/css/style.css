@@ -1,5 +1,19 @@
 
-body{margin:0 auto;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5em;color:#545454;box-shadow:0 0 2px rgba(0,0,0,.06)}
+
+@font-face {
+   font-family: gotham-rounded;
+   src: url(../font/gotham-rounded-book.otf);
+}
+
+@font-face {
+   font-family: gotham-rounded-medium;
+   src: url(../font/GothamNarrow-Medium.otf);
+}
+@font-face {
+   font-family: gotham-rounded-light;
+   src: url(../font/gotham-rounded-light.otf);
+}
+body{margin:0 auto;font-family:"gotham-rounded-light";font-size:16px;line-height:1.5em;color:#545454;box-shadow:0 0 2px rgba(0,0,0,.06)}
 
 b,strong{font-weight:600}
 .logo{padding:1em;}
@@ -195,13 +209,24 @@ font-size: 50px;}
 }
 
 .section .animation .container{position :relative}
+.animation .container h2{color: rgb(57, 57, 57);padding: 1em;font-size:50px;font-family:"gotham-rounded-light";}
+.animation .container h4{color: #207496;font-size:40px;font-family:"gotham-rounded";}
+.animation .container h4 span{color: rgb(195, 204, 52);font-size:40px;font-family:"gotham-rounded";}
+.animation .container .animate{overflow: hidden}
 .animation .col-md-6 img{margin:auto;}
-.animation .col-md-6 .x2{margin:10em 20em;}
+.animation .col-md-6 .x2{margin:10em 10em;}
+.animation .container .animate .x2 p{color: #207496;font-size:20px;font-family:"gotham-rounded";margin-left:3em}
 .animation .col-md-6 .x3{margin:40em 16em;}
-.animation .col-md-6 .vcloud{position:absolute;left:20%;padding:10em 0;}
-.animation .col-md-6 .azure{position:absolute;left:40%;padding:5em 0;}
-.animation .col-md-6 .aws{padding:8em 3em;margin-left:10%;position:absolute;}
-.animation .col-md-6 .globe{padding:8em 3em;margin-left:10%;position:absolute;bottom:0;}
-.animation .col-md-6 .twinkling1{position: fixed;bottom:20%;left:25%;}
-.animation .col-md-6 .twinkling2{position: fixed;top:0;bottom:0;}
-.animation .col-md-6 .twinkling3{position: fixed;bottom:10%;right:20%;}
+.animation .container .animate .x3 p{color: #207496;font-size:20px;font-family:"gotham-rounded";line-height: 0.8em}
+.animation .col-md-6 .vcloudbox{}
+.animation .col-md-6 .vcloud{position:absolute;left:20%;}
+.animation .col-md-6 .vcloudbox p{text-align:left;padding:20.2em 0 0 5em;color: #207496;font-size:30px;font-family:"gotham-rounded";}
+
+.animation .col-md-6 .azurebox{position:absolute;width:40em;height:20em;}
+.animation .col-md-6 .azurebox p{padding:8em 0 0 2.8em;color: #207496;font-size:30px;font-family:"gotham-rounded";}
+.animation .col-md-6 .azurebox .azure{position:absolute;left:40%;}
+.animation .col-md-6 .aws{padding:8em 3em;position:absolute;bottom:7em;left:20em;display:none;}
+.animation .col-md-6 .globe{margin:8em 0 8em 10em;position:absolute;bottom:-40em;display:none;right:15em;}
+.animation .col-md-6 .twinkling1{position: fixed;bottom:20%;left:24%; display:none;}
+.animation .col-md-6 .twinkling2{position: fixed;top:15%;bottom:0;display:none;}
+.animation .col-md-6 .twinkling3{position: fixed;bottom:10%;right:20%;display:none;}
