@@ -43,30 +43,64 @@
 </div>
 <div class="slider">
 	<div class="container-fluid">
-						<div class="row col-md-12 col-xs-12 col-lg-12">
-					<div class="left">
-						<img src="static/images/cust.png" alt="" class="img-responsive">
-						<div class="left-overlay"></div>
-					</div>
-					<h1>{{entry.customers.left.description}}<br><br>
-					<img src='{{getAssetUrl(entry.customers.left.logo)}}'></h1>
+					<div class="row col-md-12 col-xs-12 col-lg-12">
+						<div class="left">
+							<img src="static/images/cust.png" alt="" class="img-responsive">
+							<div class="left-overlay"></div>
+						</div>
+						<h1>{{entry.customers.left.description}}<br><br>
+						<img src='{{getAssetUrl(entry.customers.left.logo)}}'></h1>
 
 
-					<div class="right">
-						<div class="right-overlay">	</div>
-					</div>
-					<div class="right_content">
-					<p>{{entry.customers.right.title}}</p>
-					<span>{{entry.customers.right.description}}</span><br>
-					<button type="">{{entry.customers.right.button}}</button><br>
-					{% for init in entry.customers.right.logo %}
-					<img src='{{getAssetUrl(init)}}'>
-					{% endfor %}
+						<div class="right">
+							<div class="right-overlay">	</div>
+						</div>
 
-					</div>
+						<div class="right_content">
+						<p>{{entry.customers.right.title}}</p>
+						<span>{{entry.customers.right.description}}</span><br>
+						<button type="">{{entry.customers.right.button}}</button><br>
+						{% for init in entry.customers.right.logo %}
+						<img src='{{getAssetUrl(init)}}'>
+						{% endfor %}
+
+						</div>
 				</div>
 
 	</div>
+</div>
+<div class="animation">
+	<div class="container">
+		
+		<h2 class="text-center">vCloud Air: The most powerful,<br>most compatible cloud</h2>
+		<h4 class="text-center"><span>2X</span>the compute power of Azure</h4>
+		<h4 class="text-center"><span>2X</span>the storage performance of AWS</h4>
+		
+		<div class="animate text-center">
+
+				<div class="col-md-6 text-center">
+					<img src="static/images/2x.png" class="img-responsive x2"/>
+					<img src="static/images/twinkling-1.png" class="img-responsive twinkling1"/>
+					
+					<img src="static/images/azure.png" class="img-responsive azure"/>
+					<img src="static/images/3x.png" class="img-responsive x3"/>
+					<img src="static/images/aws.png" class="img-responsive aws"/>			
+				</div>
+
+			<div class="col-md-6 text-center">
+				<img src="static/images/twinkling-2.png" class="img-responsive twinkling2"/>
+				
+				<img src="static/images/vcloud.png" class="img-responsive vcloud"/>
+					<img src="static/images/twinkling-3.png" class="img-responsive twinkling3"/>
+				
+				<img src="static/images/globe.png" class="img-responsive globe"/>
+			</div>
+			
+			
+		</div>
+
+	</div>
+
 </div>
 
 
