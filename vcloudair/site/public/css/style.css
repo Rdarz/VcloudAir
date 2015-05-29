@@ -32,81 +32,40 @@ top: 30%;
 width: 100%;}
 
 
-body section .caption{ text-align: center;height: 20em;  margin:auto; color: white;  width: 48em;}
+body section .caption{
+  position: absolute;
+ right:0;
+ left:0;
+ bottom:-100%;
+ text-align: center;
+ 
+ margin:auto; 
+
+ color: white;  
+ width: 50%;
+ display: inline-block;
+  opacity: 0;
+  filter: alpha(opacity=0);
+ 
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+body section .caption{bottom:-50%;}
+
+
 /*  body section .caption{ transform:translateY(100%);}*/
 
-  @keyframes top-one {
-     0% {
-        transform:translateY(0);
-    }
-    6%{
-      transform:translateY(18%)
-    }
-    25%{
-      transform:translateY(-100%);
-    }
-    50%{
-        transform:translateY(-100%);
-    }
-    100%{
-      transform:translateY(-200%);
-    }
-}
-@keyframes top-two {
-     0% {
-        transform:translateY(18%);
-    }
-      25%{
-      transform:translateY(-100%);
-    }
-    50%{
-      transform:translateY(-100%);
-      
-    }
-    100%{
-      transform:translateY(-200%);
-    }
-}
-@keyframes top-three {
-     0% {
-        transform:translateY(18%);
-    }
-      25%{
-      transform:translateY(-100%);
-    }
-    50%{
-       transform:translateY(-100%);
-    }
-    100%{
-      transform:translateY(-200%);
-    }
-}
+section .caption button{  background: none;  border-style: none;  border: 0.25em solid;  padding: 0.5em 2em;  margin: 2em;}
+section .caption h2,h4{margin: 1em;}
+section .caption h2{font-size: 50px;font-family:gotham-rounded-light ;}
 
-/* body section .caption:nth-child(1){
-    animation:top-one 5s ease 5s  infinite;
- }
+.layer{  background-image: url('../images/layer.png');position: absolute;height: 100%;width: 100%;z-index: 5;top: 0;}
 
- body section .caption:nth-child(2){
-    animation:top-two 5s ease  10s infinite;
- }
-
- body section .caption:nth-child(3){
-    animation:top-three 5s ease 15s  infinite;
- }*/
-/*body section .caption:first-child {display:block;}*/
-section .caption button{  background: none;
-  border-style: none;
-  border: 0.25em solid;
-  padding: 0.5em 2em;  margin: 2em;}
-  section .caption h1,h4{margin: 1em}
-  .layer{  background-image: url('../images/layer.png');  
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 5;
-  top: 0;}
-
-  section .banner{padding:0;position: relative;}
+section .banner{padding:0;position: relative;}
   
 
   section .about{background-color: #f7f7f7;padding:6em 0;overflow: hidden;}
@@ -117,7 +76,7 @@ section .caption button{  background: none;
   section .about .container .col-md-4 p{font-size: 16px;line-height: 0.7em}
   section .about .container .col-md-4 h4{padding:1em 0;}
 
-  section .works{margin: 3em 0}
+  section .works{margin: 3em 0;overflow: hidden;}
   section .works .container .col-md-4{padding:2em;}
   section .works .container .col-md-4 p{font-size: 16px;line-height: 0.7em}
   
@@ -131,7 +90,6 @@ section .caption button{  background: none;
 
 
   .left{position: relative; float:left; left: -60%; font-size: 20px; color: #2E8DEF;}
-
   .left-overlay{position: absolute;top: 0;  left: -21%; background: rgb(0, 82, 121);mix-blend-mode: multiply;   width: 85%; height:100%;  
 
   transform-origin: bottom left;
@@ -202,9 +160,9 @@ font-size: 50px;}
 
 .animblock,.animblock-about{bottom:-50%;}
 .viewed {
-  bottom: 0%;
+  bottom: 0 !important;
    z-index: 2;
-  opacity: 1;
+  opacity: 1 !important;
   filter: alpha(opacity=100);
 }
 
@@ -227,6 +185,6 @@ font-size: 50px;}
 .animation .col-md-6 .azurebox .azure{position:absolute;left:40%;}
 .animation .col-md-6 .aws{padding:8em 3em;position:absolute;bottom:7em;left:20em;display:none;}
 .animation .col-md-6 .globe{margin:8em 0 8em 10em;position:absolute;bottom:-40em;display:none;right:15em;}
-.animation .col-md-6 .twinkling1{position: fixed;bottom:20%;left:24%; display:none;}
-.animation .col-md-6 .twinkling2{position: fixed;top:15%;bottom:0;display:none;}
-.animation .col-md-6 .twinkling3{position: fixed;bottom:10%;right:20%;display:none;}
+.animation .col-md-6 .twinkling1{position: fixed;bottom:20%;left:24%; }
+.animation .col-md-6 .twinkling2{position: fixed;top:15%;bottom:0;}
+.animation .col-md-6 .twinkling3{position: fixed;bottom:10%;right:20%;}
