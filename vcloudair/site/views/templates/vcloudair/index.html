@@ -17,22 +17,12 @@
 		</div>
 	</div>
 </div>
-<div class="container-fluid about">
-		<div class="container">
-			{% for init in entry.about.details %}
-				<div class="col-md-4 text-center animblock-about notViewed" data-position="bottom">
-					<h4>{{init.title}}</h4>
-					{{init.description}}
-					<button>{{init.button}}</button>
-				</div>
-			{% endfor %}
-		</div>
-</div>
+
 <div class="works">
 	<div class="container">
-	<h2 class="text-center">{{entry.works_title}}</h2>
+	<h2 class="text-center title">{{entry.works_title}}</h2>
 		{% for init in entry.works %}
-				<div class="col-md-4 text-center animblock notViewed" data-position="bottom">
+				<div class="col-md-4 text-center animblock notViewed" >
 					<div class="img"><img src='{{getAssetUrl(init.logo)}}'></div>
 					<h4>{{init.title}}</h4>
 					{{init.desc}}
@@ -72,42 +62,42 @@
 <div class="animation">
 	<div class="container">
 		
-		<h2 class="text-center">vCloud Air: The most powerful,<br>most compatible cloud</h2>
-		<h4 class="text-center"><span>2X</span> the compute power of Azure</h4>
-		<h4 class="text-center"><span>3X</span> the storage performance of AWS</h4>
+		<h2 class="text-center title">{{entry.animation.title}}</h2>
+		<h4 class="text-center title">{{entry.animation.tagline1}}</h4>
+		<h4 class="text-center title">{{entry.animation.tagline2}}</h4>
 		
 		<div class="animate text-center">
 
 				<div class="col-md-6 text-center">
 					<div class="x2">
-						<img src="static/images/2x.png" class="img-responsive "/>
-						<p>COMPUTE POWER</p>
+						<img src="{{getAssetUrl(entry.animation.leftbar.images[0])}}" class="img-responsive "/>
+						<p>{{entry.animation.leftbar.caption[0]}}</p>
 					</div>
-					<img src="static/images/twinkling-1.png" class="img-responsive twinkling1"/>
+					<img src="{{getAssetUrl(entry.animation.leftbar.images[1])}}" class="img-responsive twinkling1"/>
 					
 					<div class="azurebox">
-					<img src="static/images/azure.png" class="img-responsive azure"/>
-					<p>Azure</p>
+					<img src="{{getAssetUrl(entry.animation.leftbar.images[2])}}" class="img-responsive azure"/>
+					<p>{{entry.animation.leftbar.caption[1]}}</p>
 					</div>
 
 					<div class="x3">
-					<img src="static/images/3x.png" class="img-responsive"/>
-					<p>STORAGE</p>
-					<p>PERFORMANCE</p>
+					<img src="{{getAssetUrl(entry.animation.leftbar.images[3])}}" class="img-responsive"/>
+					<p>{{entry.animation.leftbar.caption[2]}}</p>
+					<p>{{entry.animation.leftbar.caption[3]}}</p>
 					</div>
-					<img src="static/images/aws.png" class="img-responsive aws"/>			
+					<img src="{{getAssetUrl(entry.animation.leftbar.images[4])}}" class="img-responsive aws"/>			
 				</div>
 
 			<div class="col-md-6 text-center">
-				<img src="static/images/twinkling-2.png" class="img-responsive twinkling2"/>
+				<img src="{{getAssetUrl(entry.animation.rightbar.image[0])}}" class="img-responsive twinkling2"/>
 				
 					<div class="vcloudbox">
-						<img src="static/images/vcloud.png" class="img-responsive vcloud"/>
-						<p>vCloud</p>
+						<img src="{{getAssetUrl(entry.animation.rightbar.image[3])}}" class="img-responsive vcloud"/>
+						<p>{{entry.animation.rightbar.caption[0]}}</p>
 					</div>
-					<img src="static/images/twinkling-3.png" class="img-responsive twinkling3"/>
+					<img src="{{getAssetUrl(entry.animation.rightbar.image[1])}}" class="img-responsive twinkling3"/>
 				
-					<img src="static/images/globe.png" class="img-responsive globe"/>
+					<img src="{{getAssetUrl(entry.animation.rightbar.image[2])}}" class="img-responsive globe"/>
 			</div>
 			
 			
@@ -115,6 +105,17 @@
 
 	</div>
 
+</div>
+<div class="container-fluid about">
+		<div class="container">
+			{% for init in entry.about.details %}
+				<div class="col-md-4 text-center animblock-about notViewed" >
+					<h4>{{init.title}}</h4>
+					{{init.description}}
+					<button>{{init.button}}</button>
+				</div>
+			{% endfor %}
+		</div>
 </div>
 
 

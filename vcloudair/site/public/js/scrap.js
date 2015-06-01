@@ -44,3 +44,9 @@ var screen_pos_about=337;
 	                
 	        		}, 200);
 	    		 });
+	    		 
+$(".animation").waypoint(function() {
+
+}, {
+    offset: '90%'
+});
