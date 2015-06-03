@@ -85,7 +85,14 @@
 					<p>{{entry.animation.leftbar.caption[2]}}</p>
 					<p>{{entry.animation.leftbar.caption[3]}}</p>
 					</div>
-					<img src="{{getAssetUrl(entry.animation.leftbar.images[4])}}" class="img-responsive aws"/>			
+					<div class="awsbox">
+						<img src="{{getAssetUrl(entry.animation.leftbar.images[4])}}" class="img-responsive aws"/>
+						<p>AWS</p>
+					</div>
+						<div id="circle4"></div>
+							<div class="performer4">
+<img src="static/images/performer.png" class="img-responsive "/>
+</div>
 				</div>
 
 			<div class="col-md-6 text-center">
@@ -95,9 +102,25 @@
 						<img src="{{getAssetUrl(entry.animation.rightbar.image[3])}}" class="img-responsive vcloud"/>
 						<p>{{entry.animation.rightbar.caption[0]}}</p>
 					</div>
+
 					<img src="{{getAssetUrl(entry.animation.rightbar.image[1])}}" class="img-responsive twinkling3"/>
-				
-					<img src="{{getAssetUrl(entry.animation.rightbar.image[2])}}" class="img-responsive globe"/>
+					<div class="globebox">
+				<img src="{{getAssetUrl(entry.animation.rightbar.image[2])}}" class="img-responsive globe"/>
+				<p>{{entry.animation.rightbar.caption[0]}}</p>
+				</div>
+					
+					<div id="circle1"></div>
+<div id="circle2"></div>
+<div id="circle3"></div>
+<div class="performer1">
+<img src="static/images/performer.png" class="img-responsive "/>
+</div>
+<div class="performer2">
+<img src="static/images/performer.png" class="img-responsive "/>
+</div>
+<div class="performer3">
+<img src="static/images/performer.png" class="img-responsive "/>
+</div>
 			</div>
 			
 			
@@ -106,8 +129,43 @@
 	</div>
 
 </div>
-<div class="container-fluid about">
-		<div class="container">
+
+
+<div class="free-trial">
+<div class="content text-center">
+								<h2>Pay only for what you need</h2>
+				<h4>That's the cloud on your terms.</h4>
+				<button>START YOUR FREE TRIAL</button>
+								</div>
+	<div class="container-fluid">
+			
+					<div class="row col-md-12 col-xs-12 col-lg-12">
+				
+							
+							<div class="free-trial-left-overlay">
+								
+							</div>
+						
+						<!-- <h1>{{entry.customers.left.description}}<br><br>
+						<img src='{{getAssetUrl(entry.customers.left.logo)}}'></h1> -->
+
+
+						
+							<div class="free-trial-right-overlay">	</div>
+						
+
+					
+				</div>
+
+	</div>
+</div>
+
+
+
+
+
+<div class="about">
+		<div class="container ">
 			{% for init in entry.about.details %}
 				<div class="col-md-4 text-center animblock-about notViewed" >
 					<h4>{{init.title}}</h4>

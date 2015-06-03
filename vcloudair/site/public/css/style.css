@@ -67,9 +67,9 @@ section .caption h2{font-size: 50px;font-family:gotham-rounded-light ;}
 
 section .banner{padding:0;position: relative;}
   
-
+  section .about .container{height:15em;}
   section .about{background-color: #f7f7f7;padding:6em 0;overflow: hidden;}
-  section .about .container .col-md-4{height:12em;border-left:0.1em solid #cccccc;}
+  section .about .container .col-md-4{border-left:0.1em solid #cccccc;}
   section .about .container .col-md-4:first-child{border:none;}
   section .about .container .col-md-4 button{background: none;color:#106a8f;border-style: none;border: 0.2em solid #106a8f;
   padding: 0.5em 2em;  margin: 2em;border-radius:0.5em; }
@@ -82,7 +82,7 @@ section .banner{padding:0;position: relative;}
   
   section .works .container .col-md-4 h4{padding:1em;}
   section .works .container .col-md-4 .img{padding:1em;}
-  section .works .container h2{font-weight:normal;letter-spacing: 0.05em;font-size: 50px; }
+  section .works .container h2{font-weight:normal;letter-spacing: 0.05em;color: rgb(57, 57, 57);font-size:50px;font-family:"gotham-rounded-light"; }
 
 
 
@@ -177,14 +177,176 @@ font-size: 50px;}
 .animation .col-md-6 .x3{margin:40em 16em;}
 .animation .container .animate .x3 p{color: #207496;font-size:20px;font-family:"gotham-rounded";line-height: 0.8em}
 .animation .col-md-6 .vcloudbox{overflow: hidden}
-.animation .col-md-6 .vcloud{position:absolute;left:20%;bottom:10%;}
-.animation .col-md-6 .vcloudbox p{text-align:left;padding:20.2em 0 0 5em;color: #207496;font-size:30px;font-family:"gotham-rounded";}
+.animation .col-md-6 .vcloud{position:absolute;left:20%;bottom:55%;}
+.animation .col-md-6 .vcloudbox p{text-align:left;padding:20.2em 0 0 6.5em;color: #207496;font-size:30px;font-family:"gotham-rounded";}
+
+.animation .col-md-6 .globebox{overflow: hidden}
+.animation .col-md-6 .globebox p{line-height: 0.1em;padding:20.2em 0 0 0;color: #207496;font-size:30px;font-family:"gotham-rounded";}
+
+.animation .col-md-6 .awsbox{overflow: hidden}
+.animation .col-md-6 .awsbox p{
+color: #207496;
+font-size: 30px;
+font-family: "gotham-rounded";
+
+position: absolute;
+bottom: 9%;
+right: 23%;}
+
 
 .animation .col-md-6 .azurebox{position:absolute;width:40em;height:20em;}
 .animation .col-md-6 .azurebox p{padding:8em 0 0 2.8em;color: #207496;font-size:30px;font-family:"gotham-rounded";}
 .animation .col-md-6 .azurebox .azure{position:absolute;left:40%;}
-.animation .col-md-6 .aws{padding:8em 3em;position:absolute;bottom:7em;left:20em;display:none;}
-.animation .col-md-6 .globe{margin:8em 0 8em 10em;position:absolute;bottom:-40em;display:none;right:15em;}
+.animation .col-md-6 .aws{position: absolute;
+bottom: 15em;
+left: 23em;
+display: none;display:none;}
+.animation .col-md-6 .globe{margin:8em 0 8em 10em;position:absolute;bottom:1em;display:none;right:15em;}
 .animation .col-md-6 .twinkling1{position: fixed;bottom:20%;left:24%;display:none; }
 .animation .col-md-6 .twinkling2{position: fixed;top:15%;bottom:0;display:none;}
 .animation .col-md-6 .twinkling3{position: fixed;bottom:10%;right:20%;display:none;}
+
+.free-trial{background:url("../images/image2.png") no-repeat;
+        background-size: 100% 100%;height:451px;position: relative;}
+.free-trial-left{ float: left;
+ /*font-size: 20px;
+width: 68%;
+height: 451px;
+color: #2E8DEF;*/}
+  .free-trial-left-overlay{  
+ position: absolute;
+left: -110%;
+background: #005279 none repeat scroll 0% 0%;
+mix-blend-mode: multiply;
+width: 96%;
+height: 451px;
+transform-origin: right bottom 0px;
+
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-24.5deg, 0deg);
+
+  }
+    .free-trial-right{ /* position: absolute;*/
+  /* position: relative; */
+/* float: right;
+ font-size: 20px;
+width: 19%;
+height: 451px;
+color: #2E8DEF;*/}
+
+  .free-trial-right-overlay{
+    border-left: 3em solid rgba(147, 150, 136, 0.5);
+    position: absolute;
+background: #A9D300 none repeat scroll 0% 0%;
+mix-blend-mode: multiply;
+width: 22%;
+height: 451px;
+top: 0px;
+right: -24%;
+transform-origin: left bottom 10px;
+
+
+
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-24.5deg, 0deg);
+
+  }
+
+  .free-trial .content{z-index: 1;overflow: hidden;color:white;font-family:"gotham-rounded-light";display:none;
+-webkit-backface-visibility: hidden;
+-webkit-transform: translateX(0);
+overflow-x: hidden;
+}
+  .free-trial .content h2{font-size: 50px;}
+    .free-trial .content h4 {font-size: 20px;margin: 1em}
+  .free-trial .content button{background-color: transparent;border-style:none;border-radius:0.3em;padding:0.2em 1em;margin:1em;border:1px solid #fff;}
+
+  #circle1{position: absolute;display: inline-block;left:0;right:11%;margin: auto;bottom: 7%}
+#circle2{bottom: 2%;position: absolute;display: inline-block;right: 25.5%;
+bottom: 4.5%;}
+#circle3{bottom: 4%;position: absolute;display: inline-block;right: 20.45%;
+bottom: 2.5%;}
+#circle4{position: absolute;display: inline-block;left:0;right:-40%;margin: auto;bottom:12.5%}
+
+.performer1{  position: absolute;
+height: 20.9%;
+bottom:7.3%;
+width: 52%;
+left: 18.7%;
+  
+  animation-duration: 1s;
+ 
+ animation-name: performer1;
+ animation-iteration-count: 1;
+ animation-timing-function: linear;
+}
+.performer1 img{transform: rotate(-23deg);position: absolute;
+top: 29%;display:none;}
+.rotate360-img1{
+  transition-duration: 2s ;
+   transform: rotateZ(360deg);
+}
+
+.performer2{  position: absolute;
+height: 26.5%;
+bottom: 4.7%;
+width: 64%;
+left: 13%;
+  
+  animation-duration: 4s;
+ 
+ animation-name: performer1;
+ animation-iteration-count: 1;
+ animation-timing-function: linear;
+}
+.performer2 img{transform: rotate(-22deg);position: absolute;
+top: 27%;display:none;}
+
+
+.rotate360-img2{
+  transition-duration: 2.5s ;
+   transform: rotateZ(360deg);
+}
+
+.performer3{  position: absolute;
+height: 30.6%;
+bottom: 3%;
+width: 73%;
+left: 8%;
+  
+  animation-duration: 6s;
+ 
+ animation-name: performer1;
+ animation-iteration-count: 1;
+ animation-timing-function: linear;
+}
+.performer3 img{transform: rotate(-19deg);position: absolute;
+top: 25%;display:none;}
+
+
+.rotate360-img3{
+  transition-duration: 2.7s ;
+   transform: rotateZ(360deg);
+}
+
+.performer4{  position: absolute;
+height: 14%;
+bottom: 12.8%;
+width: 42%;
+left: 49%;
+  
+  animation-duration: 1s;
+ 
+ animation-name: performer1;
+ animation-iteration-count: 1;
+ animation-timing-function: linear;
+}
+.performer4 img{transform: rotate(-32deg);
+position: absolute;
+top: 34%;display:none;}
+.rotate360-img4{
+  transition-duration: 1.8s ;
+   transform: rotateZ(360deg);
+}

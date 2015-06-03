@@ -17,6 +17,11 @@ $("header").slideDown(1000);
 $("#menu").slideDown(1000);
 
 
+var s = skrollr.init({
+    smoothScrolling: true,
+    smoothScrollingDuration: 1800
+});
+
 
 function twinklingOff() {
     $(".animation .col-md-6 .twinkling1,.twinkling2,.twinkling3").removeClass("display-block").addClass("display-none");
@@ -61,7 +66,7 @@ $(window).scroll(function(event) {
 });
 
 
-var screen_pos_works = 350;
+var screen_pos_works = 342;
 
 $(window).scroll(function(event) {
     var intervalId = setInterval(function() {
@@ -79,15 +84,16 @@ $(window).scroll(function(event) {
             screen_pos_works = screen_pos_works - 110;
             clearInterval(intervalId);
         }
-    }, 200);
+    }, 400);
 });
 
 
 var screen_pos_slider = 718;
 
 	$(window).scroll(function(event) {
+		
 		if ($(window).scrollTop() >= screen_pos_slider) {
-			console.log("down");
+			
 	    $(".left").animate({
 	        "left": "-10%"
 	    }, 1500);
@@ -110,7 +116,7 @@ var screen_pos_slider = 718;
 
 
 $(window).scroll(function(event) {
-    if ($(window).scrollTop() >= 1764 && $(window).scrollTop() <= 2528) {
+    if ($(window).scrollTop() >= 1764 && $(window).scrollTop() <= 3958) {
         twinklingOn();
       
     } else {
@@ -126,10 +132,10 @@ $(window).scroll(function(event) {
     }
 });
 
-$(".animate").waypoint(function() {
+
     var lastScrollTop = 0;
 
-
+  var counter=0;
     $(window).scroll(function(event) {
 
         var st = $(this).scrollTop();
@@ -149,7 +155,9 @@ $(".animate").waypoint(function() {
                 globrotate = 0;
             }
 
-            if ($(window).scrollTop() >= 2053) {
+            if ($(window).scrollTop() >= 2166) {
+            	console.log("down");
+            	
                 $('.animation .col-md-6 .azure').css({
                     "transform": "rotate(" + rotate + "deg) translateX(" + translateX + "%) translateY(" + translateY + "%)",
                     "transition-duration": "3s"
@@ -159,16 +167,69 @@ $(".animate").waypoint(function() {
                     "transform": "translateY(" + translateY + "%)",
                     "transition-duration": "1.5s"
                 });
+               
             }
-            if ($(window).scrollTop() >= 2053) {
+
+            if ($(window).scrollTop() >=2600) {
+            	if(counter==0){
                 $('.globe').fadeIn(1000).css({
                     "transform": "rotate(" + globrotate + "deg)",
                     "transition-duration": "0.8s"
                 });
                 $('.aws').fadeIn(1000);
-            }
+                $('.performer1 img').css("display","block");                
+                $('.performer1').addClass("rotate360-img1");
+                $('.performer2 img').css("display","block");               
+                $('.performer2').addClass("rotate360-img2");
+               $('.performer3 img').css("display","block");
+                $('.performer3').addClass("rotate360-img3");
+               $('.performer4 img').css("display","block");
+                $('.performer4').addClass("rotate360-img4");
+                $('#circle1').circleProgress({
+        value: 0.90,
+        startAngle:10,
+        size: 270,
+        thickness:5,
+        fill: {
+            gradient: ["#88cadf"]
+        },animation:{duration:1700}
+    });
+    $('#circle2').circleProgress({
+        value: 0.92,
+        startAngle:10,
+        size: 340,
+        thickness:5,
+        fill: {
+            gradient: ["#88cadf"]
+        },animation:{duration:1900}
+    });
+    $('#circle3').circleProgress({
+        value: 0.93	,
+        startAngle:10,
+        size: 400,
+        thickness:5,
+        fill: {
+            gradient: ["#88cadf"]
+        },
+        animation:{duration:2100}
+    });
+     $('#circle4').circleProgress({
+        value: 0.85,
+        startAngle:10,
+        size: 200,
+        thickness:5,
+        fill: {
+            gradient: ["#5CA635"]
+        },animation:{duration:1700}
+    });
+             counter++;
+            }}
 
         } else {
+
+
+
+
             // upscroll code
             if (rotate >= -50 && translateX >= 30 && translateY >= -100 && vtranslateY >= -25) {
                 rotate = rotate + 10;
@@ -198,6 +259,33 @@ $(".animate").waypoint(function() {
         lastScrollTop = st;
     }); //window scroll end
 
-}, {
-    offset: '1%'
+
+
+var temp=0;
+var screen_pos_freetrial = 3185;
+
+	$(window).scroll(function(event) {
+		
+		console.log($(window).scrollTop());
+		if ($(window).scrollTop() >= screen_pos_freetrial) {
+		
+	    $(".free-trial-left-overlay").animate({
+	        "left": "-16%"
+	    }, 3000);
+	    	if(temp==0){
+	    $(".free-trial .content").fadeIn(6000);
+	    console.log("temp"+temp);
+	    temp++;
+	}
+	    $(".free-trial-right-overlay").animate({
+	        "right": "-2%"
+	    }, 3500);
+	}else{
+		
+	
+
+	}
+
 });
+
+	
