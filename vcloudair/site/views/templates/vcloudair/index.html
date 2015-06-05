@@ -9,7 +9,7 @@
 		<div class="content">
 		{% for init in entry.slider.caption%}
 			<div class="caption slide notViewed" data-position="bottom">
-				<h2>{{init.headline}}</h2>
+				<h2 >{{init.headline}}</h2>
 				<h4>{{init.description}}</h4>
 				<button>{{init.button}}</button>
 			</div>
@@ -20,7 +20,7 @@
 
 <div class="works">
 	<div class="container">
-	<h2 class="text-center title">{{entry.works_title}}</h2>
+	<h2 class="text-center title" data-200="margin-top:20%;" data-400="margin-top:0">{{entry.works_title}}</h2>
 		{% for init in entry.works %}
 				<div class="col-md-4 text-center animblock notViewed" >
 					<div class="img"><img src='{{getAssetUrl(init.logo)}}'></div>
@@ -62,9 +62,9 @@
 <div class="animation">
 	<div class="container">
 		
-		<h2 class="text-center title">{{entry.animation.title}}</h2>
-		<h4 class="text-center title">{{entry.animation.tagline1}}</h4>
-		<h4 class="text-center title">{{entry.animation.tagline2}}</h4>
+		<h2 class="text-center title" data-1300="margin-top:20%;" data-1900="margin-top:0">{{entry.animation.title}}</h2>
+		<h4 class="text-center title" >{{entry.animation.tagline1}}</h4>
+		<h4 class="text-center title" >{{entry.animation.tagline2}}</h4>
 		
 		<div class="animate text-center">
 
